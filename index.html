@@ -6,9 +6,9 @@
     <h>Server Control:</h>
     <button py-onClick="Start">Start Server</button>
     <button py-onClick="Stop">Stop Server</button>
-    <py-script py-config="{'packages': ['py-aternos']}">
+    <py-script py-config="{'packages': ['python-aternos']}">
 
-      from py_aternos import Client
+      from python_aternos import Client
       cl = Client()
       cl.login('ProgMEMAuto','ProgMEM.CC123')
       aternos = cl.account
