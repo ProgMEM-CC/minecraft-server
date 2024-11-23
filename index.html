@@ -1,12 +1,12 @@
 <html>
   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-  <head><py-env>- './py-aternos.whl'</py-env></head>
+  <head></head>
   <body>
     <h>Server Control:</h>
     <button py-onClick="Start">Start Server</button>
     <button py-onClick="Stop">Stop Server</button>
-    <py-script>
+    <py-script py-config="{'packages': ['py-aternos']}">
 
       from python_aternos import Client
       cl = Client()
