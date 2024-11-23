@@ -5,6 +5,7 @@
     - python-aternos
   </py-env></head>
   <body>
+    <h>Server Control:</h>
     <button py-onClick="Start">Start Server</button>
     <button py-onClick="Stop">Stop Server</button>
     <py-script>
@@ -12,8 +13,16 @@
       from python-aternos import Client
       cl = Client()
       cl.login('ProgMEMAuto','ProgMEM.CC123')
-      
-      
+      aternos = cl.account
+      servs = aternos.list_servers()
+      testserv = None
+      for serv in servs:
+        if serv.address == 'ProgMEMCC.aternos.me':
+          testserv = serv
+      def Start():
+        serv.start()
+      def Stop():
+        serv.stop()
     </py-script>
     
   </body>
